@@ -1,0 +1,96 @@
+{
+    "name": "onep-admin-portal",
+    "version": "1.0.0",
+    "private": true,
+    "main": "src/index.js",
+    "author": {
+        "name": "Pongprera Punnyarphattreephop",
+        "email": "pongprera@primes.co.th",
+        "url": "http://onep.primes.co.th/"
+    },
+    "scripts": {
+        "dev": "cp -R ./pdfmake ./node_modules && cp -R ./react-datetime ./node_modules && cp -R ./antd ./node_modules && node server.js",
+        "dev:webpack": "webpack-dev-server --mode development --open",
+        "build": "cp -R ./pdfmake ./node_modules && cp -R ./react-datetime ./node_modules && cp -R ./antd ./node_modules && webpack -p --mode production",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">1%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.4",
+        "@babel/core": "^7.10.4",
+        "@babel/plugin-transform-runtime": "^7.10.5",
+        "@babel/preset-env": "^7.10.4",
+        "@babel/runtime": "^7.10.5",
+        "babel-cli": "^6.26.0",
+        "babel-loader": "^8.1.0",
+        "body-parser": "^1.19.0",
+        "connect-multiparty": "^2.2.0",
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "path": "^0.12.7",
+        "react-hot-loader": "^4.12.21",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-middleware": "^3.7.2",
+        "webpack-hot-middleware": "^2.25.0"
+    },
+    "dependencies": {
+        "@ant-design/icons": "^4.6.2",
+        "@babel/polyfill": "^7.10.4",
+        "@ckeditor/ckeditor5-build-classic": "^29.1.0",
+        "@ckeditor/ckeditor5-ckfinder": "^29.2.0",
+        "@ckeditor/ckeditor5-easy-image": "^29.2.0",
+        "@ckeditor/ckeditor5-react": "^3.0.2",
+        "@fortawesome/fontawesome-svg-core": "^1.2.29",
+        "@fortawesome/free-solid-svg-icons": "^5.13.1",
+        "@fortawesome/react-fontawesome": "^0.1.11",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.1.2",
+        "antd": "^4.16.6",
+        "axios": "^0.19.2",
+        "bootstrap": "^4.5.0",
+        "bower": "^1.8.12",
+        "connected-react-router": "^6.8.0",
+        "file-loader": "^6.0.0",
+        "history": "^4.10.1",
+        "i18next": "^19.6.2",
+        "less": "^4.1.1",
+        "less-loader": "^10.0.0",
+        "moment": "^2.27.0",
+        "node-sass": "^4.14.1",
+        "pdfmake": "^0.1.70",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.2",
+        "react-bootstrap": "^1.6.1",
+        "react-cropper": "^2.1.8",
+        "react-datetime": "^2.16.3",
+        "react-dom": "^17.0.2",
+        "react-i18next": "^11.7.0",
+        "react-redux": "^7.2.0",
+        "react-router": "^5.2.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "^3.4.1",
+        "react-select": "^4.3.1",
+        "redux": "^4.0.5",
+        "redux-form": "^8.3.6",
+        "redux-thunk": "^2.3.0",
+        "sass-loader": "^9.0.0",
+        "xlsx": "^0.16.9"
+    }
+}

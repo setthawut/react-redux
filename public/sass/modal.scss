@@ -1,0 +1,21 @@
+.modal-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+    .modal-sm {
+        max-width: 500px;
+    }
+    .modal-md {
+        max-width: 800px;
+    }
+    .modal-lg {
+        max-width: 1200px;
+    }
+}

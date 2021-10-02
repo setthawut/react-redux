@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 85 85" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <use transform="matrix(1, 0, 0, 1, 2.5, 2.5)" xlink:href="#A"/>
+  <symbol id="A" overflow="visible">
+    <g stroke="none">
+      <path d="M0 41.58C0 20.293 17.84 3.157 40 3.157S80 20.293 80 41.58 62.16 80 40 80 0 62.864 0 41.58z" fill="#aa3e3e"/>
+      <path d="M0 38.422C0 17.136 17.84 0 40 0s40 17.136 40 38.422-17.84 38.422-40 38.422S0 59.707 0 38.422z" fill="#FA5B5A"/>
+      <g stroke="#fff" stroke-linejoin="miter" transform="matrix(1.51312, 0, 0, 1.51312, 14.547269, 1.598418)" style="">
+        <g stroke-linecap="square" fill="none">
+          <g stroke-width="2.363">
+            <path d="M29.544 34.664H22.06L11.818 14.18H5.12" style="stroke-width: 3.30443px;"/>
+            <path d="M4.727 34.664h7.1L22.06 14.18h7.878" style="stroke-width: 3.30443px;"/>
+          </g>
+        </g>
+        <path d="M 27.743 10.621 L 27.821 17.766 L 33.159 14.229 L 27.788 10.647 L 27.743 10.621 Z M 27.642 30.736 L 27.692 38.218 L 32.458 34.604 L 27.699 30.771 L 27.642 30.736 Z M 6.303 18.12 L 6.303 10.636 L 0.706 14.142 L 6.303 18.12 Z M 6.336 38.231 L 6.303 31.11 L 1.125 34.767 L 6.303 38.2 L 6.336 38.231 Z" style="stroke-width: 1.32177px;"/>
+      </g>
+    </g>
+  </symbol>
+</svg>

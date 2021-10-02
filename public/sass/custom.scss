@@ -1,0 +1,299 @@
+body {
+  font-family: "THSarabunNew", sans-serif;
+  color: #172b4d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "THSarabunNew", sans-serif;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.bg-light {
+  background-color: $theme !important;
+}
+
+.navbar-light {
+  .navbar-brand {
+    color: white;
+  }
+}
+
+.form-control {
+  height: calc(1.5em + 0.75rem + 5px);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-check-inline {
+  margin-top: 5px;
+}
+
+input {
+  border: 1px solid $theme !important;
+  border-radius: 1.5em !important;
+  padding: 0px 20px !important;
+  box-shadow: $box_shadow;
+}
+
+.custom-file-input {
+  border: 1px solid $theme !important;
+  box-shadow: $box_shadow;
+  height: calc(1.5em + 0.75rem + 5px);
+}
+
+.custom-select {
+  border: 1px solid $theme !important;
+  border-radius: 1.5em !important;
+  padding: 0px 20px !important;
+  box-shadow: $box_shadow;
+  height: calc(1.5em + 0.75rem + 5px);
+  line-height: 2.5;
+}
+
+.custom-file-label {
+  border: 1px solid $theme !important;
+  border-radius: 1.5em !important;
+  box-shadow: $box_shadow;
+  padding: 8px 20px !important;
+  height: calc(1.5em + 0.75rem + 5px);
+
+  &::after {
+    background: $theme;
+    color: white;
+    border-radius: 0 1.5em 1.5em 0 !important;
+    padding: 8px 20px !important;
+    height: calc(1.5em + 0.75rem + 3px);
+  }
+}
+
+.btn {
+  padding: 8px 15px !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $theme;
+  border-color: $theme;
+
+  &:hover {
+    background-color: $theme !important;
+    border-color: $theme !important;
+  }
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #fff;
+  background-color: $theme !important;
+  border-color: $theme !important;
+  cursor: not-allowed !important;
+}
+.btn-consent {
+  width: 110px;
+}
+
+.btn-outline-primary {
+  color: $theme;
+  background-color: white;
+  border-color: $theme;
+
+  &:hover {
+    background-color: $theme_light !important;
+    border-color: $theme_light !important;
+  }
+}
+
+.svg-inline--fa {
+  height: 0.8em;
+}
+
+form {
+  margin-block-end: 0px;
+}
+
+.container {
+  margin: 0px;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.progress {
+  height: 6px;
+  margin-top: 10px;
+}
+
+.table {
+  font-size: 14px;
+}
+
+.table td {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  vertical-align: middle;
+  height: 41px;
+  min-height: 41px;
+}
+
+.table-striped {
+  thead {
+    background: $table_head_bg;
+    color: #8898aa;
+  }
+
+  tbody {
+    tr:nth-of-type(odd) {
+      background: transparent;
+    }
+    tr:nth-of-type(even) {
+      background-color: $table_body_striped_bg;
+    }
+  }
+}
+
+.page-link {
+  color: $theme;
+}
+
+.page-item.active .page-link {
+  background-color: $theme;
+  border-color: $theme;
+}
+
+.text-error {
+  color: $error;
+}
+
+.data-empty {
+  text-align: center;
+  padding-top: 5px;
+
+  .data-empty-img {
+    margin-right: 10px;
+    height: 30px;
+  }
+
+  span {
+    color: #8898aa;
+  }
+}
+
+.select__input {
+  input {
+    border: 0px !important;
+    box-shadow: none !important;
+  }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #53b99f;
+  border-color: #53b99f;
+}
+
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+  cursor: pointer;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+  cursor: pointer;
+}
+.custom-switch {
+  padding-left: 2.25rem;
+  cursor: pointer;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+  cursor: pointer;
+}

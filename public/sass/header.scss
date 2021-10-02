@@ -1,0 +1,149 @@
+$sidebar-width: 245px;
+
+#app-container {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#header {
+  right: 0;
+  left: 0;
+  border: none;
+  display: block;
+  height: 50px;
+  background: $theme;
+  z-index: 1030;
+
+  .navbar {
+    padding: 0px;
+  }
+
+  .nav-link {
+    color: white;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.active {
+      // color: $theme;
+      // background: white;
+    }
+  }
+
+  .logo {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #ffffff;
+    margin: 2px 5px 2px 2px;
+
+    img {
+      height: 36px;
+    }
+  }
+
+  .language {
+    margin-top: 8px;
+    margin-right: 15px;
+  }
+
+  .active {
+    // color: $theme;
+    // background: white;
+    text-decoration: underline;
+
+    .nav-link {
+      // color: $header_active;
+    }
+  }
+
+  .devider-title {
+    font-size: 12px;
+  }
+}
+
+#body {
+  left: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  z-index: 100;
+  margin-left: 0;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: $background;
+  padding: 15px;
+}
+
+#footer {
+  margin-left: 0;
+  padding: 10px;
+  position: relative;
+  color: #ccd6df;
+  background: #89949b;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+
+  .data {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.nav-link {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #e4ebf1;
+  color: $theme;
+}
+
+a {
+  color: $theme;
+
+  &:hover {
+    color: $theme_light;
+    text-decoration: none;
+  }
+}
+
+.visible-xs {
+  display: none !important;
+}
+
+@media (min-width: 990px) {
+  // #header {
+  //     margin-left: $sidebar-width;
+  // }
+
+  // #body {
+  //     margin-left: $sidebar-width;
+  // }
+
+  // #footer {
+  //     margin-left: $sidebar-width;
+  // }
+}
+
+@media (max-width: 990px) {
+  .sidebar-open {
+    margin-left: $sidebar-width !important;
+    margin-right: -$sidebar-width !important;
+  }
+
+  .visible-xs {
+    display: block !important;
+  }
+}

@@ -1,0 +1,2078 @@
+{
+	"info": {
+		"_postman_id": "3127eea7-c34b-43a9-9234-4d6231487b7f",
+		"name": "monitoring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login root",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"root\",\n\t\"password\":\"root\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "Keyword",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "Count",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor nodes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/nodes",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"nodes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor node",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/node?NodeId=5f45339bce13a935f54ee508",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"node"
+					],
+					"query": [
+						{
+							"key": "NodeId",
+							"value": "5f45339bce13a935f54ee508"
+						},
+						{
+							"key": "Start",
+							"value": "1549261471454",
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": "1549261571454",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get app monitors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/appmonitors",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"appmonitors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get dashboards",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/dashboards",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dashboards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/sites",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add site",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"TLS\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/site",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"site"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit site",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"TLS1\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/site",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"site"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del site",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\": \"5f5779b86065fba96e591e2d\",\n\t\"Name\": \"a1\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/site/5f97d6ef75335d2424834ea9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"site",
+						"5f97d6ef75335d2424834ea9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get nodes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/nodes",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"nodes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Node",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5f45339bce13a935f54ee508\",\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"t1\",\n    \"OS\": \"darwin\",\n    \"Version\": \"10.15.6\",\n    \"Config\": {\n        \"Server\": \"192.168.1.20:50051\",\n        \"Interval\": 5,\n        \"Mail\": [\n            \"kantapong@primes.co.th\"\n        ],\n        \"PeakAlert\": 60,\n        \"Peak\": {\n            \"Cpu\": 80,\n            \"Ram\": 80,\n            \"Disk\": 80\n        },\n        \"IsShutDown\": false,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    },\n    \"Ssh-Nil\": {\n        \"Addr\": \"\",\n        \"User\": \"\",\n        \"Password\": \"\",\n        \"Insecure\": \"\",\n        \"PublicKey\": \"\",\n        \"Timeout\": \"\",\n        \"Script\": \"\",\n        \"PostScript\": \"\"\n    },\n    \"Snmp-Nil\": {\n        \"Type\": \"windows\",\n        \"Target\": \"127.0.0.1\",\n        \"Port\": 162,\n        \"Community\": \"public\",\n        \"Version\": 2\n    }\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/node",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit Node",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5fa3a3d9257128b1d5ea062e\",\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"t2\",\n    \"OS\": \"darwin\",\n    \"Version\": \"10.15.7\",\n    \"Config\": {\n        \"Server\": \"192.168.1.20:50051\",\n        \"Interval\": 5,\n        \"Mail\": [\n            \"kantapong@primes.co.th\"\n        ],\n        \"PeakAlert\": 60,\n        \"Peak\": {\n            \"Cpu\": 80,\n            \"Ram\": 80,\n            \"Disk\": 80\n        },\n        \"IsShutDown\": false,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    },\n    \"Ssh\": null\n    ,\n    \"Snmp\": null\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/node",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del Node",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/node/5f97d8fb4544b94021c6e206",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"node",
+						"5f97d8fb4544b94021c6e206"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get groups",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/groups",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"c2\",\n    \"Image\":\"R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/group",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit group",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5f97d9fb6a0cee698a519b02\",\n    \"Name\": \"c22\",\n    \"Image\": \"\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/group",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del group",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/group/5f97d9fb6a0cee698a519b02",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"group",
+						"5f97d9fb6a0cee698a519b02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cctvs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/cctvs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"cctvs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add cctv",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Group\": \"5f97da0d6a0cee698a519b03\",\n    \"Name\": \"c1\",\n    \"Floor\": \"\",\n    \"Location\": {\n        \"Top\": 10,\n        \"Left\": 10\n    },\n    \"Config\": {\n        \"Ip\": \"127.0.0.1\",\n        \"Port\": 37777,\n        \"Username\": \"admin\",\n        \"Password\": \"P@ssw0rd\",\n        \"ChannelID\": 0,\n        \"Interval\": 1,\n        \"Mail\": [],\n        \"PeakAlert\": 60,\n        \"IsPing\": true,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    }\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/cctv",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"cctv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit cctv",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5f97dad86c97bfb32955c5b6\",\n    \"Group\": \"5f97da0d6a0cee698a519b03\",\n    \"Name\": \"c1\",\n    \"Floor\": \"\",\n    \"Location\": {\n        \"Top\": 10,\n        \"Left\": 10\n    },\n    \"Config\": {\n        \"Ip\": \"127.0.0.1\",\n        \"Port\": 37777,\n        \"Username\": \"admin\",\n        \"Password\": \"P@ssw0rd\",\n        \"ChannelID\": 0,\n        \"IsPing\": true,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    }\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/cctv",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"cctv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del cctv",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/cctv/5f97daf76c97bfb32955c5b7",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"cctv",
+						"5f97daf76c97bfb32955c5b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get networks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/networks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"networks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add network",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"n1\",\n    \"Brand\": \"\",\n    \"Model\": \"\",\n    \"Type\": \"\",\n    \"OS\": \"\",\n    \"Version\": \"\",\n    \"Config\": {\n        \"Ip\": \"127.0.0.1\",\n        \"Interval\": 1,\n        \"Mail\": [],\n        \"PeakAlert\": 60,\n        \"Peak\": {\n            \"Cpu\": 80,\n            \"Ram\": 80\n        },\n        \"IsPing\": true,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    }\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/network",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"network"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit network",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5f97dc152ae528228f8a0b2e\",\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"n22\",\n    \"Brand\": \"\",\n    \"Model\": \"\",\n    \"Type\": \"\",\n    \"OS\": \"\",\n    \"Version\": \"\",\n    \"Config\": {\n        \"Ip\": \"127.0.0.1\",\n        \"IsPing\": true,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    }\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/network",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"network"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del network",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/network/5f97daf76c97bfb32955c5b7",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"network",
+						"5f97daf76c97bfb32955c5b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Apps",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/apps",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"apps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add App",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5f45339bce13a935f54ee508\",\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"t1\",\n    \"Type\": \"\",\n    \"Config\": {\n        \"Server\": \"192.168.1.20:50051\",\n        \"Interval\": 5,\n        \"Mail\": [\n            \"kantapong@primes.co.th\"\n        ],\n        \"AppDown\": 60,\n        \"Name\": \"line.exe\",\n        \"Host\": \"192.168.1.20\",\n        \"Port\": 50051,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    },\n    \"Ssh-Nil\": {\n        \"Addr\": \"\",\n        \"User\": \"\",\n        \"Password\": \"\",\n        \"Insecure\": \"\",\n        \"PublicKey\": \"\",\n        \"Timeout\": \"\",\n        \"Script\": \"\",\n        \"PostScript\": \"\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/app",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit App",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5fa3a51bce6e5d268fbc6fca\",\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"t2\",\n    \"Type\": \"\",\n    \"Config\": {\n        \"Server\": \"192.168.1.20:50051\",\n        \"Interval\": 5,\n        \"Mail\": [\n            \"kantapong@primes.co.th\"\n        ],\n        \"AppDown\": 60,\n        \"Name\": \"line.exe\",\n        \"Host\": \"192.168.1.20\",\n        \"Port\": 50051,\n        \"IsSSH\": false,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    },\n    \"Ssh\": null\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/app",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del App",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/app/5fa3a5e29dd7f72d920bd372",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"app",
+						"5fa3a5e29dd7f72d920bd372"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get environment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/environment",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"environment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add environment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"e1\",\n    \"DeviceId\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/environment/new",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"environment",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit environment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5fbde1814dd137e68b5ba5a7\",\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"DeviceId\": \"1\",\n    \"Name\": \"e1.1\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/environment",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"environment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del environment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/environment/5fbde2baee1787ef8179e8f5",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"environment",
+						"5fbde2baee1787ef8179e8f5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get environment monitors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/environmentmonitors",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"environmentmonitors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get roles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"root\",\n\t\"password\":\"root\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/roles",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"admin\",\n    \"Views\": [\n        \"\"\n    ],\n    \"Authorizations\": {\n        \"user\": {\n            \"Read\": true,\n            \"Create\": true,\n            \"Update\": true,\n            \"Delete\": true\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/role",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit role",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n            \"Id\": \"5fbdf6ccfc2ba6604b5e1fcb\",\n            \"Name\": \"admin\",\n            \"Authorizations\": {\n                \"activity_log_channels\": {\n                    \"Read\": true,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"activity_log_sources\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"api_checking_consent\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"channel\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"consent\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"consenttype\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"customer\": {\n                    \"Read\": true,\n                    \"Create\": true,\n                    \"Update\": true,\n                    \"Delete\": true\n                },\n                \"file_checking_consent\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"file_export_data\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"file_import_data\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"file_import_do_not_call_list\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"lead\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"role\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"source\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                },\n                \"user\": {\n                    \"Read\": false,\n                    \"Create\": false,\n                    \"Update\": false,\n                    \"Delete\": false\n                }\n            },\n            \"Views\": [\n                \"\"\n            ],\n            \"Create\": \"2020-10-01T12:47:17.145Z\",\n            \"Update\": \"2020-10-01T12:47:17.145Z\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/role",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del role",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/role/5f75d036c554f9a88840232e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"role",
+						"5f75d036c554f9a88840232e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get log api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/log/api?Keyword=&Start=&End=&Skip&Limit",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"log",
+						"api"
+					],
+					"query": [
+						{
+							"key": "Keyword",
+							"value": ""
+						},
+						{
+							"key": "Start",
+							"value": ""
+						},
+						{
+							"key": "End",
+							"value": ""
+						},
+						{
+							"key": "Skip",
+							"value": null
+						},
+						{
+							"key": "Limit",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeprofile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"job\",\n\t\"Mail\":\"a@a.com\",\n\t\"PasswordOld\":\"\",\n\t\"Password\":\"\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/changeprofile",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"changeprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get line token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/line/token",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"line",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor app",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/app?AppId=5f45339bce13a935f54ee508",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"app"
+					],
+					"query": [
+						{
+							"key": "AppId",
+							"value": "5f45339bce13a935f54ee508"
+						},
+						{
+							"key": "Start",
+							"value": "1549261471454",
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": "1549261571454",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor apps",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/apps",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"apps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor networks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/networks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"networks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor cctvs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/networks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"networks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor environments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/networks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"networks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get summary node",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/summary/node",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"summary",
+						"node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get aps",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/aps",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"aps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add ap",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"ap1\",\n    \"Brand\": \"\",\n    \"Model\": \"\",\n    \"Type\": \"\",\n    \"OS\": \"\",\n    \"Version\": \"\",\n    \"Config\": {\n        \"Ip\": \"127.0.0.1\",\n        \"Interval\": 1,\n        \"Mail\": [],\n        \"PeakAlert\": 60,\n        \"IsPing\": true,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    }\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/ap",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"ap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit ap",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5fe0573bb6a8ced298fb9e0d\",\n    \"Site\": \"5f97d6c875335d2424834ea8\",\n    \"Name\": \"ap1\",\n    \"Brand\": \"\",\n    \"Model\": \"\",\n    \"Type\": \"\",\n    \"OS\": \"\",\n    \"Version\": \"\",\n    \"Config\": {\n        \"Ip\": \"127.0.0.1\",\n        \"IsPing\": true,\n        \"IsMonitor\": true,\n        \"IsAlert\": true\n    }\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/ap",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"ap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del ap",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/ap/5fe0573bb6a8ced298fb9e0d",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"ap",
+						"5fe0573bb6a8ced298fb9e0d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get summary network",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/summary/network",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"summary",
+						"network"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get role groups",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5f9e62d1e30d602a76d18e76\",\n    \"Group\": \"consent_admin_group\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/role/groups",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"role",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add role group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"5fbdf6ccfc2ba6604b5e1fcb\",\n    \"Group\": \"admin_group\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/role/group",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"role",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del role group",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Group\": \"admin_group\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/role/group",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"role",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report node",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/node?NodeId=602cc04a5771ea91a59ccd95&Start&End",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"node"
+					],
+					"query": [
+						{
+							"key": "NodeId",
+							"value": "602cc04a5771ea91a59ccd95"
+						},
+						{
+							"key": "Start",
+							"value": null
+						},
+						{
+							"key": "End",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report app",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/app?AppId=602d0e8b57386aaf71ced61c&Start&End",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"app"
+					],
+					"query": [
+						{
+							"key": "AppId",
+							"value": "602d0e8b57386aaf71ced61c"
+						},
+						{
+							"key": "Start",
+							"value": null
+						},
+						{
+							"key": "End",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report cctv",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/cctv?CCTVId=602e5dd1af7e91d4ca19a63a&Start&End",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"cctv"
+					],
+					"query": [
+						{
+							"key": "CCTVId",
+							"value": "602e5dd1af7e91d4ca19a63a"
+						},
+						{
+							"key": "Start",
+							"value": null
+						},
+						{
+							"key": "End",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report network",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/network?NetworkId=5ffd5803825f0d30d92baebf&Start&End",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"network"
+					],
+					"query": [
+						{
+							"key": "NetworkId",
+							"value": "5ffd5803825f0d30d92baebf"
+						},
+						{
+							"key": "Start",
+							"value": null
+						},
+						{
+							"key": "End",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report ap",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/ap?ApId=602b5a3eed8443aa5d972e12&Start&End",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"ap"
+					],
+					"query": [
+						{
+							"key": "ApId",
+							"value": "602b5a3eed8443aa5d972e12"
+						},
+						{
+							"key": "Start",
+							"value": null
+						},
+						{
+							"key": "End",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report nodes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/nodes",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"nodes"
+					],
+					"query": [
+						{
+							"key": "Start",
+							"value": "1583205523113",
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": "1646277523113",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report apps",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/apps",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"apps"
+					],
+					"query": [
+						{
+							"key": "Start",
+							"value": "1583205523113",
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": "1646277523113",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report cctvs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/cctvs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"cctvs"
+					],
+					"query": [
+						{
+							"key": "Start",
+							"value": "1583205523113",
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": "1646277523113",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report networks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/networks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"networks"
+					],
+					"query": [
+						{
+							"key": "Start",
+							"value": "1583205523113",
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": "1646277523113",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report aps",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/report/aps",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"report",
+						"aps"
+					],
+					"query": [
+						{
+							"key": "Start",
+							"value": "1583205523113",
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": "1646277523113",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get snapshot network",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Name\",\n    \"OS\": \"\",\n    \"Addr\": \"dev.monitoring.metrolive.co.th:22\",\n    \"User\": \"root\",\n    \"Password\": \"\",\n    \"InsecureIgnoreHostKey\": true,\n    \"PublicKey\": \"\",\n    \"Timeout\": 60000000000,\n    \"Pings\":[\"127.0.0.1\"],\n    \"Telnets\":[{\"Host\":\"127.0.0.1\", \"Port\":\"9000\"}],\n    \"Pidofs\":[\"mongod\"],\n    \"Netstats\":[\"8090\"]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/snapshot/network?Start&End",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"snapshot",
+						"network"
+					],
+					"query": [
+						{
+							"key": "Start",
+							"value": null
+						},
+						{
+							"key": "End",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/reports",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"reports"
+					],
+					"query": [
+						{
+							"key": "Start",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "End",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "Skip",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "Limit",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "Count",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get monitor network",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/monitor/network?NetworkId=5ffd5803825f0d30d92baebf",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"monitor",
+						"network"
+					],
+					"query": [
+						{
+							"key": "NetworkId",
+							"value": "5ffd5803825f0d30d92baebf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
