@@ -3,11 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "main": "src/index.js",
-    "author": {
-        "name": "Pongprera Punnyarphattreephop",
-        "email": "pongprera@primes.co.th",
-        "url": "http://onep.primes.co.th/"
-    },
+  
     "scripts": {
         "dev": "cp -R ./pdfmake ./node_modules && cp -R ./react-datetime ./node_modules && cp -R ./antd ./node_modules && node server.js",
         "dev:webpack": "webpack-dev-server --mode development --open",
